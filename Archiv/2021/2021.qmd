@@ -1,0 +1,15 @@
+---
+title: "Newsletter des Jahres 2021"
+page-layout: full
+toc: false
+listing:
+  sort-ui: true
+  sort: 
+    - "date desc"
+    - "title desc"
+  type: default
+  date-format: medium
+  page-size: 9
+  fields: [image, author, title, description, date, reading-time]
+  categories: false
+---

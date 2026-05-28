@@ -1,0 +1,59 @@
+body {
+  text-align: justify;
+  -webkit-hyphens: auto; 
+  hyphens: auto; 
+  font-family: "Open Sans", Sans-Serif;
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-brand img {
+  height: clamp(120px, 10vw, 180px);
+  width: auto !important;
+  display: block !important;
+}
+
+.breadcrumb {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+
+
+.archive-grid {
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+.archive-card {
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  background: #f8f9fa;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.archive-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.archive-card h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  margin-bottom: 1rem;
+}
+
+.archive-card a {
+  text-decoration: none;
+
+  font-weight: 600;
+}

@@ -1,0 +1,13 @@
+---
+title: "Zinsmethode"
+page-layout: full
+toc: false
+---
+
+Für Direktkredite gibt es Zinsen und die wollen berechnet werden. Erstaunlicherweise gibt es für die Berechnung von Zinsen verschiedene Methoden und gleichzeitig keine gesetzliche Vorschrift, welche Methode anzuwenden ist. Natürlich sind die Zinsen eines jährlich verzinsten Kredites für ein komplettes Jahr mathematisch klar definiert. Hierbei kommen auch sämtliche Methoden auf das gleiche Ergebnis. Unterschiede treten dann zu Tage, wenn eine Kreditsumme nur einen Teil des Jahres zur Verfügung gestellt wurde.
+
+Die “kaufmännische” Zinsmethode zum Beispiel, rechnet mit 360 Tagen im Jahr und 30 Tagen in jedem Monat. Das trifft die Realität nur näherungsweise und führt an manchen Stellen zu verblüffenden Ergebnissen. Für einen Kredit, der am 28. Februar eines Jahres eingezahlt wird, werden am 1. März schon Zinsen für 3 Tage fällig, da auch der Februar in dieser Methode 30 Tage hat. Verständlich ist diese Methode nur vor dem Hintergrund, dass sie noch aus einer Zeit stammt, in der Zinsen noch mit Federkiel und Pergament berechnet wurden und die Zinsberechnung von Hand somit wesentlich vereinfacht wurde: Die Zinsen für einen vollen Monat entspechen immer einem Zwölftel der Zinsen für ein volles Jahr, die Zinsen für einen Tag immer einem 30tel der Zinsen eines vollen Monats.
+
+Da wir die Zinsen aber nicht von Hand ausrechnen, sondern uns diese Arbeit von Computern abnehmen lassen, haben wir uns für die Effektivzinsmethode entschieden. Für ein Jahr werden 365 Tage angesetzt, bzw. für ein Schaltjahr 366. Die Zinstage (also die Anzahl der Tage, die ein Kredit zur Verfügung stand) werden auf den Tag genau gerechnet, wobei der erste Tag nicht mit gezählt wird, der letzte hingegen schon.
+
+Die Effektivzinsmethode wird gemeinhin auch als die “Gerechteste” empfunden und ist in diversen europäischen Ländern auch schon gesetzlich vorgeschrieben.

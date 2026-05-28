@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  bread-crumbs: true
+  navbar:
+    logo: "Images/eumel-svg.svg"
+    left:
+      - href: index.qmd
+      - href: Kontakt/index.qmd
+        text: Kontakt
+      - href: Archiv/index.qmd
+        text: Archiv 
+      - href: Merchandise/index.qmd
+        text: Merchandise
+      - text: Direktkredite
+        menu: 
+          - href: Direktkredite/Wie finanzieren wir uns.qmd
+          - href: Direktkredite/Was sind Direktkredite.qmd
+          - href: Direktkredite/Wie viel Sicherheit gibt es.qmd
+          - href: Direktkredite/Zinsmethode.qmd
+          - href: Direktkredite/Kreditverträge.qmd
+      - text: Impressum & Datenschutz
+        menu: 
+          - href: Impressum&Datenschutz/Impressum.qmd
+          - href: Impressum&Datenschutz/Datenschutz.qmd
+      - href: MHS/index.qmd
+lang: DE
+format:
+  html:
+    theme:
+      - lux
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+

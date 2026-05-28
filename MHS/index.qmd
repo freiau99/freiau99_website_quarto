@@ -1,0 +1,31 @@
+---
+title: "Das Mietshäuser Syndikat"
+page-layout: full
+toc: false
+css: 
+  - styles.css
+  - styles-MHS.css
+---
+
+Das Mietshäuser Syndikat ist ein Zusammenschluss selbstorganiserter Mietshäuser mit deutschlandweit mehr als 200 Hausprojekten.
+
+Ziel ist es, dauerhaft Wohnraum zu schaffen, der nicht von Mietsteigerung, Abriss, Umnutzung und Hausverkauf bedroht ist. Zudem berät das Syndikat selbstorganisierte Hausprojekte, beteiligt sich an Projekten damit diese dem Immobilienmarkt entzogen werden, initiiert neue Projekte und hilft mit Know-How bei der Projektfinanzierung.
+
+Als Mitgesellschafterin jeder Haus GmbH hat das Mietshäuser Syndikat ein Stimmrecht in Fragen der Immobilienverwertung- also bei Verkauf, Eigentumsanteilsbildung und Satzungsänderungen der GmbH-. Somit sind die Wohungen im Mietshäuser Syndikat dauerhaft dem Markt entzogen und geben Raum für die Gestaltungsfreiheit der Bewohner:Innen.
+
+Ihr wollt mehr über das Mietshäuser Syndikat erfahren? Schaut euch das folgende Video an und besucht die Website www.syndikat.org.
+
+
+
+::: {.video-wrapper}
+
+<iframe 
+  src="https://player.vimeo.com/video/193034732"
+  frameborder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+:::
+
+<figcaption class="caption">"Räume aneignen mit dem Mietshäuser Syndikat. Der Film "Das ist unser Haus!" erläutert das solidarische Modell des Mietshäuser Syndikats (www.syndikat.org), mit dem sich auch finanzschwache Gruppen bezahlbare Räume in Gemeineigentum nachhaltig sichern können."Das ist unser Haus!" ist ein Film der Autoren und Produzenten Burkhard Grießenauer, Daniel Kunle und Holger Lauinger. Die Produktion wurde mit Hilfe des SEELAND Medienkooperative e.V. realisiert. [...]" (2017)</figcaption>

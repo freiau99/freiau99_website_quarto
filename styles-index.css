@@ -1,0 +1,86 @@
+body {
+  text-align: justify;
+  -webkit-hyphens: auto; 
+  hyphens: auto; 
+  font-family: "Open Sans", Sans-Serif;
+}
+
+.quarto-title-block {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Flex auf den inneren Container legen */
+.quarto-title-block .quarto-title-banner {
+  min-height: 100vh;
+
+  background-position: center;
+  
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Titel Styling */
+.quarto-title-block .title {
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+  color:  #111111;
+}
+
+/* Subtitle */
+.quarto-title-block .subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 700px;
+  opacity: 1;
+  line-height: 1.5;
+  margin: 0 auto;
+  color:  #111111;
+}
+
+/* carousel1 */
+
+#carouselround {
+  height: 80vh;      /* gleiche Höhe für alles */
+  overflow: hidden;
+}
+
+#carouselround .carousel-item img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;  /* wichtig! schneidet sauber */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+
+#carouselhist {
+  height: 80vh;      /* gleiche Höhe für alles */
+  overflow: hidden;
+}
+
+#carouselhist .carousel-item img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;  /* wichtig! schneidet sauber */
+}
+
+
+.leaflet-container {
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
