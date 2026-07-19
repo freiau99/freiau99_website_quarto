@@ -14,6 +14,16 @@
     ]
   },
   {
+    "listing": "/Archiv/2020/2020.html",
+    "items": [
+      "/Archiv/2020/Weihnachten 2020.html",
+      "/Archiv/2020/Juli 2020.html",
+      "/Archiv/2020/April 2020.html",
+      "/Archiv/2020/Februar 2020.html",
+      "/Archiv/2020/Januar 2020.html"
+    ]
+  },
+  {
     "listing": "/Archiv/2021/2021.html",
     "items": [
       "/Archiv/2021/Dezember 2021.html",
@@ -39,16 +49,6 @@
     "listing": "/Archiv/2026/2026.html",
     "items": [
       "/Archiv/2026/Januar 2026.html"
-    ]
-  },
-  {
-    "listing": "/Archiv/2020/2020.html",
-    "items": [
-      "/Archiv/2020/Weihnachten 2020.html",
-      "/Archiv/2020/Juli 2020.html",
-      "/Archiv/2020/April 2020.html",
-      "/Archiv/2020/Februar 2020.html",
-      "/Archiv/2020/Januar 2020.html"
     ]
   }
 ]

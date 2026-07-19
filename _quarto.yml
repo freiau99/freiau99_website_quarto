@@ -46,6 +46,6 @@ format:
       - brand
     css: styles.css
     toc: true
-
+output-dir: docs
 editor: visual
 
