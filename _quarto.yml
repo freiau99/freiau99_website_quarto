@@ -4,22 +4,35 @@ project:
 website:
   bread-crumbs: true
   navbar:
+    collapse: true
     logo: "Images/eumel-svg.svg"
     left:
       - href: index.qmd
-      - href: Kontakt/index.qmd
-        text: Kontakt
+      - text: Über uns
+        href: Über uns/index.qmd
       - href: Archiv/index.qmd
         text: Archiv 
       - href: Merchandise/index.qmd
         text: Merchandise
       - text: Direktkredite
-        menu: 
-          - href: Direktkredite/Wie finanzieren wir uns.qmd
-          - href: Direktkredite/Was sind Direktkredite.qmd
-          - href: Direktkredite/Wie viel Sicherheit gibt es.qmd
-          - href: Direktkredite/Zinsmethode.qmd
-          - href: Direktkredite/Kreditverträge.qmd
+        menu:
+          - text: Überblick
+            href: Direktkredite/index.qmd
+            
+          - text: Wie finanzieren wir uns?
+            href: Direktkredite/Wie finanzieren wir uns.qmd
+            
+          - text: Was sind Direktkredite?  
+            href: Direktkredite/Was sind Direktkredite.qmd
+            
+          - text: Wie viel Sicherheit gibt es?  
+            href: Direktkredite/Wie viel Sicherheit gibt es.qmd
+            
+          - text: Welche Zinsmethoden gibt es?  
+            href: Direktkredite/Zinsmethode.qmd
+            
+          - text: Kreditverträge  
+            href: Direktkredite/Kreditverträge.qmd
       - text: Impressum & Datenschutz
         menu: 
           - href: Impressum&Datenschutz/Impressum.qmd

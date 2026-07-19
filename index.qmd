@@ -1,28 +1,43 @@
 ---
 title: "FREIAU99"
-subtitle: "Solidarischer Wohnraum in Freiburg seit 2019"
+subtitle: "Solidarischer Wohnraum in Freiburg seit 2020"
 title-block-banner: Images/haus-von-hinten.png
 toc: false
 page-layout: full
-format: 
-  html: 
-    css: 
+format:
+  html:
+    css:
       - styles.css
       - styles-index.css
-
 engine: knitr
 ---
 
+# Wohnraum dem Markt entziehen.
 
+Seit 2020 organisieren wir die Freiau99 in Freiburg selbstverwaltet und dauerhaft außerhalb des Immobilienmarktes.\
+Wir sichern bezahlbaren Wohnraum – heute und für kommende Generationen.
 
-# **Hallo zusammen!**
+::: hero-buttons
+<a class="btn btn-outline-primary btn-lg" href="Direktkredite/index.html"> Direktkredite verstehen </a>
+:::
 
-Wir, die Bewohner:Innen der Freiau99, freuen uns dass ihr euren Weg auf unsere Website gefunden habt.
+------------------------------------------------------------------------
 
-\
-Schaut euch um und informiert euch - wir sind dankbar für euer Interesse, Anmerkungen und Eure Unterstützung!
+## Warum Freiau99?
 
-Im “Archiv” könnt ihr euch durch bereits versendete Versionen unserer Newsletter klicken und euch so ein bisschen zur Chronologie des Projekts einlesen.
+Wohnraum in Städten wird zunehmend zu einem Spekulationsobjekt.
+
+- Mieten steigen kontinuierlich\
+- Häuser werden verkauft und umgewandelt\
+- soziale Strukturen gehen verloren
+
+#### **Wir zeigen eine Alternative:**
+
+Wohnraum kann dauerhaft solidarisch organisiert werden:
+
+Im Frühjahr 2019 erfuhren wir, dass unser Haus verkauft werden soll. Damit standen wir vor einer Entwicklung, die viele Städte betrifft: steigende Mieten und der Verlust bezahlbaren Wohnraums durch den Immobilienmarkt.
+
+Mit dem Hausprojekt Freiau99 setzen wir uns dafür ein, Wohnraum in Freiburg langfristig solidarisch zu organisieren und zu erhalten – für eine offene, vielfältige und bezahlbare Stadt.
 
 ::::::: {#carouselround .carousel .slide data-bs-ride="carousel" data-bs-interval="6000"}
 :::::: carousel-inner
@@ -41,115 +56,77 @@ Im “Archiv” könnt ihr euch durch bereits versendete Versionen unserer Newsl
 
 <!-- CONTROLS (WICHTIG: KEINE WRAPPER!) -->
 
-<button class="carousel-control-prev" 
-        type="button" 
-        data-bs-target="#carouselround" 
-        data-bs-slide="prev">
-
-  <span class="carousel-control-prev-icon"></span>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselround" data-bs-slide="prev">
 
 </button>
 
-<button class="carousel-control-next" 
-        type="button" 
-        data-bs-target="#carouselround" 
-        data-bs-slide="next">
-
-  <span class="carousel-control-next-icon"></span>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselround" data-bs-slide="next">
 
 </button>
 :::::::
 
-# Über uns
+------------------------------------------------------------------------
 
-Wir, die Bewohner:Innen der Freiau 99, sind 9 junge Menschen die in unserer gemeinsamen Zeit nicht nur eine enge Bindung zueinander, sondern auch zu dem Haus aufgebaut haben. Als bunte Truppe und Gruppe von kreativen Köpfen wollen wir uns unseren Wohnraum beibehalten und unseren Vorstellungen nach nutzen.
+## Wie wir arbeiten
 
-Im Frühling 2019, als unser Vermieter uns mitteilte, dass er das Haus verkaufen will, sahen wir uns mit einem Thema konfrontiert, das hochaktuell ist und immer weiter an Brisanz zunimmt: Der Erhalt bezahlbaren Wohnraums angesichts des immer stärker werdenden Einflusses des Immobilienmarktes.
+Die Freiau99 ist ein selbstverwaltetes Hausprojekt.
 
-Mit dem Hausprojekt Freiau99 tragen wir nun unseren Teil dazu bei, dass Freiburg auch in Zukunft noch die junge, dynamische und offene Stadt ist, die wir schätzen und leisten unseren Beitrag zu einem solidarischeren Wohnungsmarkt
+- gemeinschaftliches Wohnen
+- langfristige Sicherung des Hauses
+- Finanzierung über solidarische Direktkredite
+- keine Gewinnlogik
 
-![Oben v.l.n.r.: Daniel, Raoul, Frans, Luka und Marvin; unten v.l.n.r.: Jannis, Magda, Mare - Can und Elias fehlen.](Images/vormhausmitmarvi.jpeg)
+::: card
+<h3>🤝 Projekt kennenlernen</h3>
 
-# **Das Haus**
+<p>Du möchtest mehr über unser Projekt erfahren?</p>
 
-Die Freiaustraße 99, das hellblaue, dritte Haus der Reihe, ist eines der wenigen noch existierenden denkmalgeschützten Häuser einer ehemaligen Arbeiter:Innensiedlung am Rande des Wiehreviertels in Freiburg.
-
-
-::: g-col-6
-```{r}
-#| label: Karte
-#| include: true
-#| echo: false
-#| message: false
-#| warning: false
-
-library(leaflet)
-library(sf)
-
-Lat = 47.991401
-Long = 7.837554
-Name = "Freiau99"
-
-df = data.frame(Lat, Long, Name)
-
-f99 = st_as_sf(
-  df,
-  coords = c("Long", "Lat"),
-  crs = 4326
-)
-
-leaflet(
-  data = f99,
-  height = 300, width = 400
-) %>%
-  addTiles() %>%
-  addMarkers(
-    popup = ~Name
-  ) %>%
-  setView(
-    lng = Long,
-    lat = Lat,
-    zoom = 17
-  )
-
-```
-
-
-Die Freiau 99 entstand 1870/71 als Teil einer Arbeiter:Innensiedlung. Damals bestand die Freiau aus zehn Häuserreihen mit jeweils fünf Häusern.
-
-Durch den Bau des Autobahnzubringers im Jahr 1974 sollte durch die Freiausiedlung eine Schneise geschlagen werden. Dies stieß auf Widerstand - es kam zu Demonstrationen und Freiburgs ersten Hausbesetzungen. Jedoch konnten auch diese den Abriss nicht verhindern. Heute gibt es noch fünf Häuserreihen, welche seit 1986 unter Denkmalschutz stehen. Die Reihe mit der Freiau 99 befindet sich etwas abseits zwischen Bahnschienen, der Heinrich-von-Stephan-Straße und riesigen Bürogebäuden.
-
-::::::: {#carouselhist .carousel .slide data-bs-ride="carousel" data-bs-interval="6000"}
-:::::: carousel-inner
-::: {.carousel-item .active}
-![](Images/Z.png)
+<a class="btn btn-outline-primary" href="Über uns/index.html"> Über uns </a>
 :::
 
-::: carousel-item
-![](Images/2Q==.png)
+------------------------------------------------------------------------
+
+## Unterstütze die Freiau99
+
+Die Freiau99 lebt davon, dass Menschen Wohnraum nicht dem Markt überlassen.\
+Ohne solidarische Finanzierung wäre dieses Hausprojekt nicht möglich.
+
+::::: card-grid
+::: card
+<h3>💰 Direktkredit geben</h3>
+
+<p>Hilf dabei, Wohnraum langfristig dem Immobilienmarkt zu entziehen.</p>
+
+<a class="btn btn-outline-primary" href="Direktkredite/index.html"> Mehr erfahren </a>
 :::
 
-::::::
+::: card
+<h3>📣 Weitererzählen</h3>
 
-<!-- CONTROLS (WICHTIG: KEINE WRAPPER!) -->
+<p>Hilf mit, die Idee solidarischer Wohnprojekte sichtbar zu machen und Folge uns auf Instagram.</p>
 
-<button class="carousel-control-prev" 
-        type="button" 
-        data-bs-target="#carouselhist" 
-        data-bs-slide="prev">
+<a class="btn btn-outline-primary" href="https://www.instagram.com/freiau99/"> <i class="bi bi-instagram"></i></a>
+:::
+:::::
 
-  <span class="carousel-control-prev-icon"></span>
+------------------------------------------------------------------------
 
-</button>
+## Freiau99 in Kürze
 
-<button class="carousel-control-next" 
-        type="button" 
-        data-bs-target="#carouselhist" 
-        data-bs-slide="next">
+- 🏠 1 selbstverwaltetes Hausprojekt\
+- 👥 9 Bewohner:innen\
+- 📍 Freiburg im Breisgau\
+- 🌱 seit 2020 solidarisch organisiert\
+- 🔒 dauerhaft dem Immobilienmarkt entzogen
 
-  <span class="carousel-control-next-icon"></span>
+------------------------------------------------------------------------
 
-</button>
-:::::::
+## Kontakt
 
-<figcaption class="caption">Die vorhergegangenen Bilder sind Fotografien von Willy Pragher, aufgenommen am 22. August 1974 bei der Demonstration in der Freiau-Siedlung.</figcaption>
+E-Mail:\
+<a href="mailto:info-freiau99@riseup.net?subject=Anfrage">info-freiau99\@riseup.net</a>
+
+------------------------------------------------------------------------
+
+Freiaustraße 99\
+79100 Freiburg im Breisgau

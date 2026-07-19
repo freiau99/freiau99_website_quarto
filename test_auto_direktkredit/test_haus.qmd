@@ -1,0 +1,333 @@
+---
+title: "test_Haus"
+css: styles-haus.css
+---
+
+```{r}
+library(htmltools)
+library(glue)
+
+# =====================================================
+# ZAHLEN ANPASSEN
+# =====================================================
+
+dk_gesamt      <- 280000
+dk_abbezahlt   <- 150000
+
+bank_gesamt    <- 500000
+bank_abbezahlt <- 120000
+
+# =====================================================
+# BERECHNUNGEN
+# =====================================================
+
+gesamt <- dk_gesamt + bank_gesamt
+abbezahlt <- dk_abbezahlt + bank_abbezahlt
+
+dk_quote <- min(dk_abbezahlt / dk_gesamt, 1)
+bank_quote <- min(bank_abbezahlt / bank_gesamt, 1)
+
+# Dachziegel
+ziegel_total <- 20
+ziegel_gruen <- round(ziegel_total * dk_quote)
+
+# Fenster
+fenster_total <- 40
+fenster_blau <- round(fenster_total * bank_quote)
+
+# =====================================================
+# CSS
+# =====================================================
+
+css <- '
+<style>
+
+.house-wrapper{
+  max-width:700px;
+  margin:2rem auto;
+  text-align:center;
+  font-family:system-ui,sans-serif;
+}
+
+.house-svg{
+  width:100%;
+  max-width:500px;
+  height:auto;
+}
+
+.roof-bg{
+  fill:#cfcfcf;
+}
+
+.house-body{
+  fill:#efefef;
+  stroke:#888;
+  stroke-width:2;
+}
+
+.tile-paid{
+  fill:#4CAF50;
+}
+
+.tile-open{
+  fill:#d9d9d9;
+}
+
+.window-paid{
+  fill:#4F81BD;
+}
+
+.window-open{
+  fill:#d9d9d9;
+}
+
+.tile,
+.window{
+  stroke:white;
+  stroke-width:1;
+}
+
+.door{
+  fill:#777;
+}
+
+.stats{
+  margin-top:1rem;
+}
+
+.legend{
+  margin-top:1rem;
+  font-size:0.95rem;
+}
+
+.legend-item{
+  display:inline-block;
+  margin:0 12px;
+}
+
+.colorbox{
+  width:14px;
+  height:14px;
+  display:inline-block;
+  margin-right:5px;
+  vertical-align:middle;
+}
+
+</style>
+'
+
+# =====================================================
+# SVG START
+# =====================================================
+
+svg <- c()
+
+svg <- c(
+  svg,
+  css,
+  '<div class="house-wrapper">',
+  '<svg class="house-svg" viewBox="0 0 500 450">'
+)
+
+# =====================================================
+# DACH
+# =====================================================
+
+svg <- c(
+  svg,
+  '
+  <polygon
+    points="100,140 250,40 400,140"
+    class="roof-bg"/>
+  '
+)
+
+# =====================================================
+# CLIPPFAD FÜR DACH
+# =====================================================
+
+svg <- c(
+  svg,
+  '
+  <defs>
+    <clipPath id="roofClip">
+      <polygon points="100,140 250,40 400,140"/>
+    </clipPath>
+  </defs>
+  '
+)
+
+# =====================================================
+# DACHZIEGEL
+# =====================================================
+
+ziegel_nr <- 1
+
+rows <- c(7, 6, 4, 3)
+
+for(r in seq_along(rows)) {
+
+  n_tiles <- rows[r]
+
+  y <- 120 - (r - 1) * 18
+
+  total_width <- n_tiles * 28
+
+  start_x <- 250 - total_width / 2
+
+  for(col in 1:n_tiles) {
+
+    klasse <- if (ziegel_nr <= ziegel_gruen) {
+      "tile-paid"
+    } else {
+      "tile-open"
+    }
+
+    x <- start_x + (col - 1) * 28
+
+    svg <- c(
+      svg,
+      glue(
+        '
+        <rect
+          x="{x}"
+          y="{y}"
+          width="24"
+          height="12"
+          rx="2"
+          class="{klasse} tile"
+          clip-path="url(#roofClip)"
+        />
+        '
+      )
+    )
+
+    ziegel_nr <- ziegel_nr + 1
+  }
+}
+
+# =====================================================
+# HAUSKÖRPER
+# =====================================================
+
+svg <- c(
+  svg,
+  '
+  <rect
+    x="120"
+    y="140"
+    width="260"
+    height="240"
+    class="house-body"/>
+  '
+)
+
+# =====================================================
+# FENSTER
+# =====================================================
+
+fenster_nr <- 1
+
+for(row in 1:5){
+
+  for(col in 1:8){
+
+    klasse <- if (fenster_nr <= fenster_blau) {
+      "window-paid"
+    } else {
+      "window-open"
+    }
+
+    x <- 145 + (col - 1) * 28
+    y <- 165 + (row - 1) * 38
+
+    svg <- c(
+      svg,
+      glue(
+        '
+        <rect
+          x="{x}"
+          y="{y}"
+          width="18"
+          height="22"
+          rx="1"
+          class="{klasse} window"
+        />
+        '
+      )
+    )
+
+    fenster_nr <- fenster_nr + 1
+  }
+}
+
+# =====================================================
+# TÜR
+# =====================================================
+
+svg <- c(
+  svg,
+  '
+  <rect
+    x="225"
+    y="315"
+    width="50"
+    height="65"
+    class="door"/>
+  '
+)
+
+# =====================================================
+# SVG ENDE
+# =====================================================
+
+svg <- c(
+  svg,
+  '</svg>'
+)
+
+# =====================================================
+# TEXT
+# =====================================================
+
+svg <- c(
+  svg,
+  glue(
+    '<h2>{format(abbezahlt, big.mark=".")} € zurückgezahlt</h2>'
+  ),
+  glue(
+    '<p><strong>{round(100 * abbezahlt / gesamt,1)} %</strong> der Gesamtfinanzierung</p>'
+  ),
+  '<div class="stats">',
+  glue(
+    '<p><strong>Direktkredite:</strong> {format(dk_abbezahlt,big.mark=".")} € von {format(dk_gesamt,big.mark=".")} € ({round(100*dk_quote)} %)</p>'
+  ),
+  glue(
+    '<p><strong>Bankdarlehen:</strong> {format(bank_abbezahlt,big.mark=".")} € von {format(bank_gesamt,big.mark=".")} € ({round(100*bank_quote)} %)</p>'
+  ),
+  '</div>',
+  '
+  <div class="legend">
+
+    <span class="legend-item">
+      <span class="colorbox" style="background:#4CAF50;"></span>
+      Direktkredite zurückgezahlt
+    </span>
+
+    <span class="legend-item">
+      <span class="colorbox" style="background:#4F81BD;"></span>
+      Bankdarlehen zurückgezahlt
+    </span>
+
+    <span class="legend-item">
+      <span class="colorbox" style="background:#d9d9d9;"></span>
+      Noch offen
+    </span>
+
+  </div>
+  ',
+  '</div>'
+)
+
+HTML(paste(svg, collapse = "\n"))
+```

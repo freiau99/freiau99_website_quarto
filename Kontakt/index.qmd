@@ -3,7 +3,3 @@ title: "Kontakt"
 toc: false
 page-layout: full
 ---
-
-Um uns zu kontaktieren, schreibt uns am besten eine Mail an [**info-freiau99\@riseup.net**](mailto:info-freiau99@riseup.net).
-
-Ansonsten könnt ihr uns auch postalisch kontaktieren - **Freiaustraße 99, 79100 Freiburg im Breisgau**.

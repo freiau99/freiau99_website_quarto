@@ -1,59 +1,275 @@
+
 body {
-  text-align: justify;
-  -webkit-hyphens: auto; 
-  hyphens: auto; 
-  font-family: "Open Sans", Sans-Serif;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.6;
+  color: #111;
+  background: #fafafa;
 }
+
+/* =========================
+   RESPONSIVE GRID FIX
+========================= */
+
+@media (max-width: 768px) {
+  .g-col-6 {
+    width: 100% !important;
+  }
+}
+
+/* =========================
+   NAVBAR (SCHWARZ)
+========================= */
 
 .navbar {
   min-height: 80px;
+  background: #111 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar a,
+.navbar .nav-link,
+.navbar-brand {
+  color: #fff !important;
+}
+
+.navbar a:hover,
+.navbar .nav-link:hover {
+  opacity: 0.7;
 }
 
 .navbar-brand img {
-  height: clamp(120px, 10vw, 180px);
+  height: clamp(100px, 8vw, 160px);
   width: auto !important;
   display: block !important;
 }
+
+.dropdown-menu {
+  background-color: #111 !important;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* normale Dropdown-Links */
+.dropdown-menu .dropdown-item {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+/* Hover-Zustand */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: rgba(255,255,255,0.08) !important;
+  color: #fff !important;
+}
+
+/* aktive Seite im Dropdown */
+.dropdown-menu .active {
+  background-color: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+}
+
+/* Navbar Dropdown Toggle (Direktkredite etc.) */
+.navbar .dropdown-toggle {
+  color: #fff !important;
+}
+
+/* =========================
+   BREADCRUMBS
+========================= */
 
 .breadcrumb {
   display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
+  font-size: 0.9rem;
 }
 
+/* =========================
+   TYPOGRAPHY
+========================= */
 
+p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   HERO TITLE (Quarto)
+========================= */
+
+.quarto-title-block .quarto-title-banner {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.quarto-title-block .title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.quarto-title-block .subtitle {
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+  max-width: 750px;
+  line-height: 1.4;
+  margin: 0 auto;
+  font-weight: 600;
+  color: #222;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-buttons a {
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* =========================
+   ARCHIVE GRID
+========================= */
 
 .archive-grid {
   margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
+/* =========================
+   ARCHIVE CARD
+========================= */
+
 .archive-card {
   padding: 2rem;
-
-  border-radius: 20px;
-
-  background: #f8f9fa;
-
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
   transition: all 0.25s ease;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .archive-card:hover {
   transform: translateY(-4px);
-
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .archive-card h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .archive-card a {
   text-decoration: none;
-
   font-weight: 600;
+  color: #111;
+}
+
+.archive-card a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.navbar-nav .nav-link {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }

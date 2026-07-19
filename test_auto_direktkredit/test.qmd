@@ -1,0 +1,56 @@
+---
+title: "Survey"
+format: html
+---
+
+:::: card
+## Zinssatz wählen
+
+<input type="range" id="zins" min="0" max="2" step="0.1" value="0">
+
+::: value
+Aktuell: [0.0]{#output} %
+:::
+
+<button onclick="submitValue()">
+
+Weiter
+
+</button>
+::::
+
+```{=html}
+<script>
+(() => {
+
+  const init = () => {
+    const slider = document.querySelector("#zins");
+    const output = document.querySelector("#output");
+
+    if (!slider || !output) return;
+
+    const update = () => {
+      output.textContent = parseFloat(slider.value).toFixed(1);
+    };
+
+    slider.addEventListener("input", update);
+
+    // wichtig: Initialwert setzen
+    update();
+  };
+
+  // Quarto-safe init
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+})();
+
+function submitValue() {
+  const val = document.querySelector("#zins").value;
+  alert(`Gewählt: ${val}%`);
+}
+</script>
+```

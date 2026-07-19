@@ -1,48 +1,156 @@
 body {
-  text-align: justify;
-  -webkit-hyphens: auto; 
-  hyphens: auto; 
-  font-family: "Open Sans", Sans-Serif;
+  font-family: "Open Sans", sans-serif;
+  background: #fafafa;
+  color: #111;
+  line-height: 1.6;
+  text-align: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
-.quarto-title-block {
-  min-height: 100vh;
-  position: relative;
-}
+/* =========================
+   HERO / TITLE BLOCK
+========================= */
 
-/* Flex auf den inneren Container legen */
 .quarto-title-block .quarto-title-banner {
-  min-height: 100vh;
-
-  background-position: center;
-  
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   text-align: center;
+  padding: 2rem;
 }
 
-/* Titel Styling */
 .quarto-title-block .title {
-  font-size: clamp(3rem, 9vw, 7rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.03em;
   margin-bottom: 1rem;
-  color:  #111111;
+  color: #111;
 }
 
-/* Subtitle */
 .quarto-title-block .subtitle {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  max-width: 700px;
-  opacity: 1;
-  line-height: 1.5;
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+  max-width: 750px;
+  line-height: 1.4;
   margin: 0 auto;
-  color:  #111111;
+  font-weight: 600;
+  color: #222;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-buttons a {
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* =========================
+   LINKS & BUTTONS (global feel)
+========================= */
+
+a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   CONTENT WIDTH (readability)
+========================= */
+
+main, .content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
 /* carousel1 */
@@ -74,13 +182,4 @@ body {
   height: 80vh;
   width: 100%;
   object-fit: cover;  /* wichtig! schneidet sauber */
-}
-
-
-.leaflet-container {
-  border-radius: 18px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }

@@ -1,0 +1,39 @@
+---
+# title: "Direktkredite"
+page-layout: full
+toc: false
+css: 
+  - styles-direktkredite.css
+---
+
+::: hero-image
+![](Images/fight.png){alt="Titelbild"}
+:::
+# Direktkredite
+
+Direktkredite ermöglichen eine solidarische Finanzierung von Wohnprojekten. 
+Statt ausschließlich auf Banken zurückzugreifen, können Menschen ihr Geld direkt 
+in gemeinschaftlich organisierte Projekte investieren und damit bezahlbaren Wohnraum unterstützen.
+
+In diesem Bereich erfährst du mehr über die Grundlagen der Finanzierung, die Sicherheit 
+von Direktkrediten, die Berechnung der Zinsen und die Gestaltung der Kreditverträge.
+
+::::: card-grid
+::: card
+<a class="btn btn-outline-primary" href="Wie finanzieren wir uns.html"> <i class="bi bi-cash-coin"></i> Finanzierung </a>
+:::
+
+::: card
+<a class="btn btn-outline-primary" href="Wie viel Sicherheit gibt es.html"> <i class="bi bi-lock-fill"></i> Sicherheit </a>
+:::
+
+::: card
+<a class="btn btn-outline-primary" href="Zinsmethode.html"> <i class="bi bi-graph-up-arrow"></i> Zinsen </a>
+:::
+
+::: card
+<a class="btn btn-outline-primary" href="Kreditverträge.html"> <i class="bi bi-file-earmark-text"></i> Verträge </a>
+:::
+:::::
+
+

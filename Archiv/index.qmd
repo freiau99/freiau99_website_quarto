@@ -4,76 +4,58 @@ page-layout: full
 toc: false
 ---
 
-
 ::: {.g-col-6 .archive-card}
-
 ## 2026
 
 Alle Newsletter aus dem Jahr 2026
 
 [Archiv öffnen →](2026/2026.qmd)
-
 :::
 
 ::: {.g-col-6 .archive-card}
-
 ## 2025
 
 Alle Newsletter aus dem Jahr 2025
 
 [Archiv öffnen →](2025/2025.qmd)
-
 :::
 
 ::: {.g-col-6 .archive-card}
-
 ## 2024
 
-Alle Newsletter aus dem Jahr 2025
+Alle Newsletter aus dem Jahr 2024
 
 [Archiv öffnen →](2024/2024.qmd)
-
 :::
 
 ::: {.g-col-6 .archive-card}
-
 ## 2023
 
-Alle Newsletter aus dem Jahr 2025
+Alle Newsletter aus dem Jahr 2023
 
 [Archiv öffnen →](2023/2023.qmd)
-
 :::
 
 ::: {.g-col-6 .archive-card}
-
 ## 2022
 
-Alle Newsletter aus dem Jahr 2025
+Alle Newsletter aus dem Jahr 2022
 
 [Archiv öffnen →](2022/2022.qmd)
-
 :::
 
 ::: {.g-col-6 .archive-card}
-
 ## 2021
 
-Alle Newsletter aus dem Jahr 2025
+Alle Newsletter aus dem Jahr 2021
 
 [Archiv öffnen →](2021/2021.qmd)
-
 :::
-
 
 ::: {.g-col-6 .archive-card}
-
 ## 2020
 
-Alle Newsletter aus dem Jahr 2025
+Alle Newsletter aus dem Jahr 2020
 
 [Archiv öffnen →](2020/2020.qmd)
-
 :::
-
-
