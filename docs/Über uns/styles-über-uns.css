@@ -1,0 +1,58 @@
+/* carousel1 */
+
+#carouselround {
+  height: 80vh;      /* gleiche Höhe für alles */
+  overflow: hidden;
+}
+
+#carouselround .carousel-item img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;  /* wichtig! schneidet sauber */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+
+#carouselhist {
+  height: 80vh;      /* gleiche Höhe für alles */
+  overflow: hidden;
+}
+
+#carouselhist .carousel-item img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;  /* wichtig! schneidet sauber */
+}
+
+
+.leaflet-container {
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  min-height: 60vh;
+}
+
+.g-col-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaflet-container,
+.carousel {
+  flex: 1;
+  height: 100%;
+}

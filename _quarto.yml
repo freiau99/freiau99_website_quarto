@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   bread-crumbs: true
@@ -46,6 +47,5 @@ format:
       - brand
     css: styles.css
     toc: true
-output-dir: docs
 editor: visual
 

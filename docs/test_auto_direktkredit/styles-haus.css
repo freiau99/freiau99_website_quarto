@@ -1,0 +1,66 @@
+.house-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.house-svg {
+  width: 100%;
+  height: auto;
+}
+
+.paid {
+  fill: #4caf50;
+  animation: fadeIn 1s ease forwards;
+}
+
+.open {
+  fill: #d9d9d9;
+}
+
+.bank-paid {
+  fill: #5b8ff9;
+  animation: fadeIn 1s ease forwards;
+}
+
+.bank-open {
+  fill: #d9d9d9;
+}
+
+.legend {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.legend span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.box {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.dk {
+  background: #4caf50;
+}
+
+.bank {
+  background: #5b8ff9;
+}
+
+.offen {
+  background: #d9d9d9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
